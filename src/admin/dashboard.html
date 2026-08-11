@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+>
+
+<title>Swap Shop | Admin Dashboard</title>
+
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="admin-main.css">
+<link rel="stylesheet" href="admin-dashboard.css">
+<link rel="stylesheet" href="admin-product.css">
+<link rel="stylesheet" href="admin-user.css">
+<link rel="stylesheet" href="responsive.css">
+
+</head>
+
+
+<body>
+
+
+<header class="navbar">
+
+    <div class="logo">
+        Swap Shop <span>Admin Portal</span>
+    </div>
+
+    <button
+        class="menu-toggle"
+        id="menuToggle"
+    >
+        ☰
+    </button>
+
+    <nav class="nav-links">
+
+        <a href="index.html">
+            Customer
+        </a>
+
+        <a href="../Vendor/vendor.html">
+            Vendor
+        </a>
+
+        <a
+            href="admin.html"
+            class="active"
+        >
+            Admin
+        </a>
+
+        <a href="javascript:logout()">
+            Logout
+        </a>
+
+    </nav>
+
+</header>
+
+
+<main class="admin-page">
+
+
+<!-- HEADER -->
+
+<section class="admin-header">
+
+    <div>
+
+        <h1>
+            Admin Dashboard
+        </h1>
+
+        <p>
+            Complete oversight of customers,
+            vendors, products and orders.
+        </p>
+
+    </div>
+
+    <button
+        class="danger-btn"
+        onclick="resetDemoData()"
+    >
+        Reset Demo Data
+    </button>
+
+</section>
+
+
+<!-- MAIN STATISTICS -->
+
+<section class="admin-stats">
+
+
+    <div class="admin-stat">
+
+        <span>👥</span>
+
+        <strong id="customerCount">
+            0
+        </strong>
+
+        <small>
+            Customers
+        </small>
+
+    </div>
+
+
+    <div class="admin-stat">
+
+        <span>🏪</span>
+
+        <strong id="vendorCount">
+            0
+        </strong>
+
+        <small>
+            Vendors
+        </small>
+
+    </div>
+
+
+    <div class="admin-stat">
+
+        <span>📦</span>
+
+        <strong id="productCount">
+            0
+        </strong>
+
+        <small>
+            Products
+        </small>
+
+    </div>
+
+
+    <div class="admin-stat">
+
+        <span>🧾</span>
+
+        <strong id="orderCount">
+            0
+        </strong>
+
+        <small>
+            Orders
+        </small>
+
+    </div>
+
+</section>
+
+
+<!-- SECONDARY STATISTICS -->
+
+<section class="admin-stats secondary">
+
+
+    <div class="admin-stat">
+
+        <span>⏳</span>
+
+        <strong id="pendingCount">
+            0
+        </strong>
+
+        <small>
+            Pending Products
+        </small>
+
+    </div>
+
+
+    <div class="admin-stat">
+
+        <span>💰</span>
+
+        <strong id="revenueCount">
+            0
+        </strong>
+
+        <small>
+            Total Revenue
+        </small>
+
+    </div>
+
+
+    <div class="admin-stat">
+
+        <span>🚚</span>
+
+        <strong id="deliveryCount">
+            0
+        </strong>
+
+        <small>
+            Pending Delivery
+        </small>
+
+    </div>
+
+
+    <div class="admin-stat">
+
+        <span>⚠️</span>
+
+        <strong id="issueCount">
+            0
+        </strong>
+
+        <small>
+            Attention Needed
+        </small>
+
+    </div>
+
+</section>
+
+
+<!-- ADMIN NAVIGATION -->
+
+<div class="admin-tabs">
+
+    <button
+        class="tab active"
+        data-tab="overview"
+    >
+        Overview
+    </button>
+
+    <button
+        class="tab"
+        data-tab="customers"
+    >
+        Customers
+    </button>
+
+    <button
+        class="tab"
+        data-tab="vendors"
+    >
+        Vendors
+    </button>
+
+    <button
+        class="tab"
+        data-tab="products"
+    >
+        Products
+    </button>
+
+    <button
+        class="tab"
+        data-tab="orders"
+    >
+        Orders
+    </button>
+
+</div>
+
+
+<!-- OVERVIEW -->
+
+<section
+    id="overview"
+    class="admin-panel active"
+>
+
+    <div class="panel-grid">
+
+
+        <div class="admin-card">
+
+            <h2>
+                Pending Product Approvals
+            </h2>
+
+            <div id="pendingProducts"></div>
+
+        </div>
+
+
+        <div class="admin-card">
+
+            <h2>
+                Recent Orders
+            </h2>
+
+            <div id="recentOrders"></div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- CUSTOMERS -->
+
+<section
+    id="customers"
+    class="admin-panel"
+>
+
+    <div class="admin-card">
+
+        <div class="panel-head">
+
+            <h2>
+                Customer Management
+            </h2>
+
+            <input
+                class="admin-search"
+                id="customerSearch"
+                placeholder="Search customers..."
+            >
+
+        </div>
+
+        <div id="customersTable"></div>
+
+    </div>
+
+</section>
+
+
+<!-- VENDORS -->
+
+<section
+    id="vendors"
+    class="admin-panel"
+>
+
+    <div class="admin-card">
+
+        <div class="panel-head">
+
+            <h2>
+                Vendor Management
+            </h2>
+
+            <input
+                class="admin-search"
+                id="vendorSearch"
+                placeholder="Search vendors..."
+            >
+
+        </div>
+
+        <div id="vendorsTable"></div>
+
+    </div>
+
+</section>
+
+
+<!-- PRODUCTS -->
+
+<section
+    id="products"
+    class="admin-panel"
+>
+
+    <div class="admin-card">
+
+        <div class="panel-head">
+
+            <h2>
+                All Products
+            </h2>
+
+            <input
+                class="admin-search"
+                id="productSearch"
+                placeholder="Search products..."
+            >
+
+        </div>
+
+        <div id="productsTable"></div>
+
+    </div>
+
+</section>
+
+
+<!-- ORDERS -->
+
+<section
+    id="orders"
+    class="admin-panel"
+>
+
+    <div class="admin-card">
+
+        <div class="panel-head">
+
+            <h2>
+                All Orders
+            </h2>
+
+            <select id="orderStatusFilter">
+
+                <option value="">
+                    All statuses
+                </option>
+
+                <option>
+                    Pending
+                </option>
+
+                <option>
+                    Processing
+                </option>
+
+                <option>
+                    Shipped
+                </option>
+
+                <option>
+                    Delivered
+                </option>
+
+                <option>
+                    Cancelled
+                </option>
+
+            </select>
+
+        </div>
+
+        <div id="ordersTable"></div>
+
+    </div>
+
+</section>
+
+
+</main>
+
+
+<script src="app.js"></script>
+
+<script src="auth.js"></script>
+
+<script>
+requireRole("admin");
+</script>
+
+<script src="admin-main.js"></script>
+<script src="admin-dashboard.js"></script>
+<script src="admin-product.js"></script>
+<script src="admin-user.js"></script>
+<script src="admin-order.js"></script>
+<script src="admin-customer.js"></script>
+
+
+
+</body>
+
+</html>

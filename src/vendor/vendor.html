@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Swap Shop | Vendor Dashboard</title>
+
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="vendor-main.css">
+<link rel="stylesheet" href="vendor-dashboard.css">
+<link rel="stylesheet" href="vendor-product.css">
+<link rel="stylesheet" href="responsive.css">
+</head>
+
+<body>
+
+<header class="navbar">
+    <div class="logo">
+        Swap Shop <span>Vendor Portal</span>
+    </div>
+
+    <button class="menu-toggle" id="menuToggle">☰</button>
+
+    <nav class="nav-links">
+        <a href="../Customer/index.html">Customer</a>
+        <a href="vendor.html" class="active">Vendor</a>
+        <a href="../admin/admin.html">Admin</a>
+        <a href="javascript:logout()">Logout</a>
+    </nav>
+</header>
+
+<main class="vendor-page">
+
+    <section class="vendor-header">
+        <div>
+            <h1>Vendor Dashboard</h1>
+            <p>Manage your store, products and orders.</p>
+        </div>
+
+        <button class="primary-btn" onclick="scrollToForm()">
+            + Add Product
+        </button>
+    </section>
+
+
+    <!-- STATISTICS -->
+
+    <section class="vendor-stats">
+
+        <div class="vendor-stat">
+            <span>📦</span>
+            <strong id="totalProducts">0</strong>
+            <small>My Products</small>
+        </div>
+
+        <div class="vendor-stat">
+            <span>⏳</span>
+            <strong id="pendingProducts">0</strong>
+            <small>Pending</small>
+        </div>
+
+        <div class="vendor-stat">
+            <span>✅</span>
+            <strong id="approvedProducts">0</strong>
+            <small>Approved</small>
+        </div>
+
+        <div class="vendor-stat">
+            <span>💰</span>
+            <strong id="vendorRevenue">0</strong>
+            <small>Revenue</small>
+        </div>
+
+    </section>
+
+
+    <!-- PRODUCT MANAGEMENT -->
+
+    <section class="vendor-layout">
+
+        <div class="vendor-card" id="productFormCard">
+
+            <h2 id="formTitle">Add New Product</h2>
+
+            <form id="productForm">
+
+                <input
+                    id="editId"
+                    type="hidden"
+                >
+
+                <input
+                    id="title"
+                    type="text"
+                    placeholder="Product name"
+                    required
+                >
+
+                <select id="category" required>
+                    <option value="">Select category</option>
+                    <option>Electronics</option>
+                    <option>Fashion</option>
+                    <option>Home</option>
+                    <option>Vehicles</option>
+                </select>
+
+                <input
+                    id="price"
+                    type="number"
+                    min="0"
+                    placeholder="Price (FCFA)"
+                    required
+                >
+
+                <input
+                    id="location"
+                    type="text"
+                    placeholder="Vendor location"
+                    required
+                >
+
+                <input
+                    id="image"
+                    type="url"
+                    placeholder="Product image URL"
+                    required
+                >
+
+                <textarea
+                    id="description"
+                    placeholder="Product description"
+                    required
+                ></textarea>
+
+                <div class="form-actions">
+
+                    <button
+                        class="primary-btn"
+                        type="submit"
+                        id="submitBtn"
+                    >
+                        Submit Product
+                    </button>
+
+                    <button
+                        class="cancel-btn"
+                        type="button"
+                        onclick="cancelEdit()"
+                    >
+                        Cancel
+                    </button>
+
+                </div>
+
+                <p class="form-note">
+                    New or edited products go back to Admin for approval.
+                </p>
+
+            </form>
+
+        </div>
+
+
+        <!-- MY PRODUCTS -->
+
+        <div class="vendor-card">
+
+            <h2>My Products</h2>
+
+            <div
+                id="vendorProducts"
+                class="vendor-products"
+            ></div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ORDERS -->
+
+    <section class="vendor-card vendor-orders">
+
+        <h2>My Orders</h2>
+
+        <div id="vendorOrders"></div>
+
+    </section>
+
+</main>
+
+
+<script src="auth.js"></script>
+
+<script>
+requireRole("vendor");
+</script>
+
+<script src="vendor-order.js"></script>
+<script src="vendor-product.js"></script>
+<script src="vendor-main.js"></script>
+
+</body>
+</html>

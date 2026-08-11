@@ -1,0 +1,79 @@
+.product-details{
+padding:30px;
+}
+
+.details-card{
+background:white;
+border-radius:15px;
+padding:25px;
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:30px;
+box-shadow:0 5px 15px rgba(0,0,0,.08);
+}
+
+.main-image{
+width:100%;
+height:400px;
+object-fit:cover;
+border-radius:12px;
+}
+
+.gallery{
+display:flex;
+gap:10px;
+margin-top:15px;
+}
+
+.gallery img{
+width:80px;
+height:80px;
+object-fit:cover;
+border-radius:8px;
+cursor:pointer;
+}
+
+.product-info h1{
+font-size:32px;
+margin-bottom:15px;
+}
+
+.product-info p{
+margin:10px 0;
+}
+
+.detail-price{
+font-size:28px;
+font-weight:bold;
+color:#0284C7;
+}
+
+.vendor-box{
+background:#F0F9FF;
+padding:15px;
+border-radius:10px;
+margin-top:20px;
+}
+
+.product-buttons{
+display:flex;
+gap:15px;
+margin-top:25px;
+}
+
+.product-buttons button{
+padding:14px 20px;
+border:none;
+border-radius:10px;
+background:#38BDF8;
+color:white;
+font-weight:bold;
+}
+
+.product-buttons button:hover{
+background:#0284C7;
+}
+
+.whatsapp{
+background:#22C55E!important;
+}

@@ -1,0 +1,79 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: white;
+    color: black;
+}
+.logo {
+    font-size: 31px;
+    font-weight: 700;
+    color: black;
+}
+.navbar {
+    height: 70px;
+    background: deepskyblue;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 30px;
+}
+.nav-links {
+    display:flex;
+    gap:20px;
+}
+.nav-links a {
+    color:white;
+    padding:8px 12px;
+    border-radius:8px;
+    transition:.3s;
+}
+
+.vendor-container {
+    width: 92%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.vendor-header {
+    background: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 12px;
+}
+
+.vendor-header h1 {
+    margin: 0;
+}
+
+.vendor-header p {
+    color: black;
+}
+
+.vendor-btn {
+    border: none;
+    padding: 10px 16px;
+    border-radius: 7px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.vendor-btn-primary {
+    background: #0284c7;
+    color: white;
+}
+
+.vendor-btn-danger {
+    background: #ef4444;
+    color: white;
+}
+
+.vendor-card {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+}

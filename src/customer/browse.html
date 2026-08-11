@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Swap Shop | Browse Products</title>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="productS.css">
+<link rel="stylesheet" href="responsive.css">
+</head>
+<body>
+<header class="navbar">
+<div class="logo">Swap Shop
+<span>Buy. Sell. Connect.</span>
+</div>
+<button class="menu-toggle" id="menuToggle">☰</button>
+<nav class="nav-links">
+<a href="index.html">Dashboard</a>
+<a href="browse.html" class="active">Browse Products</a>
+<a href="../Cart/cart.html">Cart <span id="cartCount" class="cart-count">0</span></a>
+<a href="../Checkout/checkout.html">Checkout</a>
+<a href="../Vendor/vendor.html">Vendor Portal</a>
+<a href="#">Profile</a>
+<a href="#">Logout</a>
+</nav>
+</header>
+<div class="products-container">
+<h1>Browse Products</h1>
+<p>Find approved products from Swap Shop vendors.</p>
+<!-- SEARCH AND FILTER AREA -->
+<section class="filter-box">
+    <input type="search" id="searchInput" placeholder="Search products...">
+
+    <select id="categoryFilter">
+        <option value="">All Categories</option>
+        <option value="Electronics">Electronics</option>
+        <option value="Fashion">Fashion</option>
+        <option value="Home">Home</option>
+        <option value="Vehicles">Vehicles</option>
+    </select>
+
+    <select id="availabilityFilter">
+        <option value="">Availability</option>
+        <option value="Available">Available</option>
+        <option value="Sold">Sold</option>
+    </select>
+
+    <select id="sortProducts">
+        <option value="">Sort Products</option>
+        <option value="low">Price Low - High</option>
+        <option value="high">Price High - Low</option>
+        <option value="newest">Newest</option>
+        <option value="oldest">Oldest</option>
+        <option value="az">Alphabetical A-Z</option>
+    </select>
+        <input type="number" id="maxPrice" placeholder="Maximum price">
+</section>
+
+<section id="productGrid" class="product-grid"></section>
+</div>
+<script src="app.js"></script>
+<script src="sample.js"></script>
+<script src="productS.js"></script>
+<script src="storage.js"></script>
+
+</body>
+</html>

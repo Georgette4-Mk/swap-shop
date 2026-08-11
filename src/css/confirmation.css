@@ -1,0 +1,59 @@
+.confirmation{
+max-width:700px;
+margin:50px auto;
+background:#fff;
+padding:40px;
+border-radius:15px;
+box-shadow:0 5px 15px rgba(0,0,0,.08);
+text-align:center;
+}
+
+.success-icon{
+width:90px;
+height:90px;
+margin:0 auto 20px;
+border-radius:50%;
+background:#22C55E;
+color:#fff;
+font-size:50px;
+display:flex;
+align-items:center;
+justify-content:center;
+}
+
+.confirmation h1{
+color:#22C55E;
+margin-bottom:15px;
+}
+
+.order-details{
+text-align:left;
+margin:30px 0;
+padding:20px;
+background:#F0F9FF;
+border-radius:10px;
+}
+
+.order-details p{
+margin:10px 0;
+}
+
+.actions{
+display:flex;
+justify-content:center;
+gap:15px;
+flex-wrap:wrap;
+}
+
+.actions a{
+padding:12px 25px;
+background:#38BDF8;
+color:#fff;
+border-radius:8px;
+font-weight:bold;
+transition:.3s;
+}
+
+.actions a:hover{
+background:#0284C7;
+}

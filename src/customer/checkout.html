@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+
+<title>Swap Shop | Checkout</title>
+
+<link rel="stylesheet" href="../Customer/style.css">
+<link rel="stylesheet" href="checkout.css">
+<link rel="stylesheet" href="../Customer/responsive.css">
+</head>
+<body>
+<header class="navbar">
+<div class="logo">Swap Shop<span>Buy. Sell. Connect.</span></div>
+
+<button class="menu-toggle" id="menuToggle">☰</button>
+<nav class="nav-links">
+<a href="../Customer/index.html">Dashboard</a>
+<a href="../Customer/browse.html">Browse</a>
+<a href="../Cart/cart.html">Cart <span id="cartCount" class="cart-count">0</span></a>
+<a href="checkout.html" class="active">Checkout</a>
+</nav>
+
+</header>
+<main class="checkout-page">
+<h1>Checkout</h1>
+<div class="checkout-layout">
+<section class="checkout-form">
+<h2>Delivery Information</h2>
+<form id="checkoutForm">
+
+
+<input type="text"id="fullName"placeholder="Full Name"required>
+<input type="email"id="email"placeholder="Email Address"required>
+<input type="tel"id="phone"placeholder="Phone Number"required>
+<input type="text"id="address"placeholder="Delivery Address"required>
+<input type="text"id="city"placeholder="City"required>
+<input type="text"id="region"placeholder="Region"required>
+<textarea id="notes"placeholder="Additional Notes"></textarea>
+<h2>Payment Method</h2>
+<label><input type="radio" name="payment" value="Cash on Delivery" checked>Cash on Delivery</label>
+<label><input type="radio" name="payment" value="Mobile Money">Mobile Money</label>
+<label><input type="radio" name="payment" value="Bank Transfer">Bank Transfer</label>
+
+<button type="submit">Place Order</button>
+</form>
+</section>
+<section class="order-summary">
+<h2>Your Order</h2>
+<div id="checkoutItems"></div>
+<hr>
+<p>Delivery Fee:$<span id="checkoutDelivery">5</span>
+</p>
+<h3>Total:$<span id="checkoutTotal">0</span>
+</h3>
+</section>
+</div>
+</main>
+<script src="../Customer/app.js"></script>
+<script src="../Customer/storage.js"></script>
+<script src="checkout.js"></script>
+
+</body>
+</html>
