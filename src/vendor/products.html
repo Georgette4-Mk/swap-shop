@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Swap Shop | My Products</title>
+
+    <link rel="stylesheet" href="../css/vendor.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- MOBILE HEADER -->
+
+    <header class="mobile-header">
+
+        <button
+            id="sidebarToggle"
+            class="menu-toggle">
+
+            ☰
+
+        </button>
+
+        <div class="mobile-logo">
+            Swap Shop
+        </div>
+
+    </header>
+
+
+    <div class="page-layout">
+
+
+        <!-- =========================
+             SIDEBAR
+        ========================== -->
+
+        <aside
+            class="sidebar"
+            id="sidebar">
+
+
+            <div class="sidebar-logo">
+
+                <div class="logo-circle">
+                    S
+                </div>
+
+                <div>
+                    <strong>Swap Shop</strong>
+                    <span>Vendor Portal</span>
+                </div>
+
+            </div>
+
+
+            <nav class="sidebar-nav">
+                <p class="menu-title">MENU</p>
+                <a href="dashboard.html" class="sidebar-link">
+
+                    <span></span>
+                    <span>Dashboard</span>
+                </a>
+
+                <a
+                    href="products.html"
+                    class="sidebar-link active">
+                    <span></span>
+                    <span>My Products</span>
+
+                </a>
+
+                <a
+                    href="orders.html"
+                    class="sidebar-link">
+                    <span></span>
+                    <span>My Orders</span>
+                </a>
+            </nav>
+
+            <div class="sidebar-user">
+                <div class="user-avatar">V</div>
+                <div class="user-info">
+                    <strong>Vendor Account</strong>
+                    <span>Online</span>
+                </div>
+
+                <button class="logout-btn" onclick="logoutVendor()">↪ </button>
+
+            </div>
+
+        </aside>
+
+
+        <div
+            class="sidebar-overlay"
+            id="sidebarOverlay">
+        </div>
+
+
+        <!--MAIN CONTENT-->
+
+        <main class="main-content">
+            <div class="section-header">
+                <div>
+
+                    <p class="welcome-text">STORE MANAGEMENT</p>
+                    <h1>My Products</h1>
+                    <p class="page-description">Add, edit and manage your products.</p>
+
+                </div>
+
+            </div>
+
+
+            <!--PRODUCT AREA-->
+
+            <div class="products-layout">
+
+
+                <!-- ADD PRODUCT -->
+
+                <div class="card form-card" id="productFormCard">
+
+                    <div class="card-heading">
+
+                        <div>
+                            <h2 id="formTitle">Add New Product</h2>
+                            <p>Create a product for your store.</p>
+                        </div>
+
+                    </div>
+
+
+                    <form id="productForm">
+                        <input id="editId" type="hidden">
+                        <label for="title">Product Name</label>
+
+                        <input id="title" type="text" placeholder="Enter product name" required>
+                        <label for="category">Category</label>
+
+                        <select id="category" required>
+                            <option value="">Select category</option>
+                            <option>Electronics</option>
+                            <option>Fashion</option>
+                            <option>Home</option>
+                            <option>Vehicles </option>
+                            <option>Books</option>
+                            <option>Others</option>
+                        </select>
+
+
+                        <label for="price">Price</label>
+
+                        <input id="price" type="number" min="0" placeholder="Price in FCFA" required>
+                        <label for="location">Location</label>
+
+                        <input id="location" type="text" placeholder="Vendor location" required>
+                        <label for="image">Product Image URL</label>
+                        <input id="image"type="url" placeholder="Product image URL" required>
+
+
+                        <label for="description">
+                            Description
+                        </label>
+
+                        <textarea id="description" placeholder="Describe your product" required></textarea>
+                        <div class="form-actions">
+                            <button class="primary-btn" type="submit" id="submitBtn"> Submit Product</button>
+                            <button class="cancel-btn" type="button" onclick="cancelEdit()"> Cancel</button>
+                        </div>
+                        <p class="form-note">New or edited products go to Admin for approval.</p>
+
+                    </form>
+
+                </div>
+
+                <!-- PRODUCT LIST -->
+
+                <div class="card">
+                    <div class="card-heading">
+
+                        <div>
+                            <h2>Product List</h2>
+                            <p>Products currently in your store.</p>
+                        </div>
+
+                    </div>
+
+
+                    <div id="vendorProducts" class="vendor-products">
+                        <div class="empty-state">
+
+                            <div>▣</div>
+
+                            <p>No products have been added yet.</p>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <footer class="footer">
+
+                © 2026 Swap Shop Vendor Portal
+
+            </footer>
+
+        </main>
+
+    </div>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="../js/vendor.js"></script>
+
+</body>
+
+</html>

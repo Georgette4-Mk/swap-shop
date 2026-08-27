@@ -41,17 +41,18 @@ ecommerce-platform/
     ├── admin/                    # Super Admin Dashboard
     │   ├── dashboard.html        # Global platform metrics
     │   ├── users.html            # User management (approving vendors)
-    │   └── categories.html       # Global category management
+    │   ├── categories.html       # Global category management
+    │   └── orders.html           # Orders management
     │
     ├── components/               # Reusable UI Components (ES Modules)
-    │   ├── Header.js
-    │   ├── Sidebar.js            # Dashboard side navigation
-    │   └── ProductCard.js
+    │   ├── customer.js
+    │   ├── admin.js              # Web navigation
+    │   └── vendor.js
     │
     ├── css/                      # Stylesheets
-    │   ├── style.css             # Core global styles
-    │   ├── components.css        # Component layouts
-    │   └── dashboards.css        # Shared panel layouts
+    │   ├── custmoer.css          # Customer layout
+    │   ├── admin.css             # Admin layouts
+    │   └── vendor.css            # Vendor layouts
     │
     └── js/                       # Core Application Logic
         ├── app.js                # Core platform initialization

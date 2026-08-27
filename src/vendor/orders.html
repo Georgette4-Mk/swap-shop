@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>Swap Shop | My Orders</title>
+
+    <link rel="stylesheet" href="../css/vendor.css">
+
+</head>
+
+
+<body>
+
+
+    <!-- MOBILE HEADER -->
+
+    <header class="mobile-header">
+
+        <button id="sidebarToggle" class="menu-toggle">☰</button>
+        <div class="mobile-logo">Swap Shop</div>
+
+    </header>
+    <div class="page-layout">
+
+        <!--SIDEBAR-->
+
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-logo">
+                <div class="logo-circle">S</div>
+
+                <div>
+                    <strong>Swap Shop</strong>
+                    <span>Vendor Portal</span>
+                </div>
+
+            </div>
+            <nav class="sidebar-nav">
+                <p class="menu-title">MENU</p>
+
+                <a href="dashboard.html" class="sidebar-link">
+                    <span></span>
+                    <span>Dashboard</span>
+                </a>
+
+                <a href="products.html" class="sidebar-link">
+                    <span></span>
+                    <span>My Products</span>
+                </a>
+
+                <a href="orders.html" class="sidebar-link active">
+                    <span></span>
+                    <span>My Orders</span>
+                </a>
+
+            </nav>
+
+            <!-- USER -->
+
+            <div class="sidebar-user">
+                <div class="user-avatar">V</div>
+                <div class="user-info">
+                    <strong>Vendor Account</strong>
+                    <span>Online</span>
+                </div>
+
+                <button class="logout-btn" onclick="logoutVendor()">↪</button>
+
+            </div>
+
+        </aside>
+
+        <!-- MOBILE OVERLAY -->
+
+        <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+        <!-- MAIN CONTENT-->
+
+        <main class="main-content">
+            <div class="section-header">
+                <div>
+                    <p class="welcome-text">STORE ACTIVITY</p>
+                    <h1>My Orders</h1>
+                    <p class="page-description">Track orders connected to your products.</p>
+                </div>
+            </div>
+
+
+            <!-- ORDER STATISTICS-->
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon blue">☰</div>
+                    <div>
+                        <strong id="newOrders">0</strong>
+                        <span>New Orders</span>
+                    </div>
+
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon orange">◷</div>
+                    <div>
+                        <strong id="processingOrders">0</strong>
+                        <span>Processing</span>
+                    </div>
+
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon green">✓</div>
+
+                    <div>
+                        <strong id="completedOrders">0</strong>
+                        <span>Completed</span>
+
+                    </div>
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon purple">₣</div>
+
+                    <div>
+                        <strong id="orderRevenue">0</strong>
+                        <span>Order Revenue</span>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- ORDERS-->
+            <div class="card">
+                <div class="card-heading">
+                    <div>
+                        <h2>Recent Orders</h2>
+                        <p>Order status and customer information.</p>
+                    </div>
+
+                </div>
+
+                <div id="vendorOrders" class="orders-list">
+                    <div class="empty-state">
+                        <div>☰</div>
+
+                        <p>No orders available yet.</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <footer class="footer">
+                © 2026 Swap Shop Vendor Portal
+            </footer>
+
+        </main>
+
+    </div>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="../js/vendor.js"></script>
+
+</body>
+
+</html>

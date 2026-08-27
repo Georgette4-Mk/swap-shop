@@ -1,0 +1,1078 @@
+/* ==========================================
+   SWAP SHOP VENDOR PAGE
+   ONE CSS FILE
+   COLORS: DEEPSKYBLUE + WHITE
+========================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f9fc;
+    color: #17212b;
+}
+
+
+/*MAIN LAYOUT*/
+
+.page-layout {
+    min-height: 100vh;
+    display: flex;
+}
+
+.main-content {
+    flex: 1;
+    min-width: 0;
+    padding: 30px;
+    margin-left: 250px;
+}
+
+
+/* ==========================================
+   SIDEBAR
+========================================== */
+
+.sidebar {
+    width: 260px;
+    height: 100vh;
+
+    position: fixed;
+    left: 0;
+    top: 0;
+
+    background: white;
+
+    border-right: 1px solid #dceaf2;
+
+    display: flex;
+    flex-direction: column;
+
+    padding: 25px 18px;
+
+    z-index: 1000;
+}
+
+
+/* LOGO */
+
+.sidebar-logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    padding: 5px 10px 30px;
+}
+
+.logo-circle {
+    width: 42px;
+    height: 42px;
+
+    border-radius: 50%;
+
+    background: deepskyblue;
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.sidebar-logo strong {
+    display: block;
+    font-size: 20px;
+}
+
+.sidebar-logo span {
+    display: block;
+
+    margin-top: 3px;
+
+    color: #64748b;
+
+    font-size: 12px;
+}
+
+
+/* MENU */
+
+.menu-title {
+    color: #94a3b8;
+
+    font-size: 11px;
+    font-weight: bold;
+
+    letter-spacing: 1px;
+
+    padding: 0 12px;
+
+    margin: 5px 0 10px;
+}
+
+
+/* SIDEBAR LINKS */
+
+.sidebar-nav {
+    flex: 1;
+}
+
+.sidebar-link {
+    text-decoration: none;
+
+    color: #475569;
+
+    display: flex;
+    align-items: center;
+
+    gap: 13px;
+
+    padding: 13px 14px;
+
+    margin-bottom: 6px;
+
+    border-radius: 9px;
+
+    font-weight: 600;
+
+    transition: .2s;
+}
+
+.sidebar-link span:first-child {
+    width: 22px;
+
+    text-align: center;
+
+    font-size: 19px;
+}
+
+.sidebar-link:hover {
+    background: #e8f8ff;
+    color: deepskyblue;
+}
+
+.sidebar-link.active {
+    background: deepskyblue;
+    color: white;
+
+    box-shadow:
+        0 5px 15px rgba(0, 191, 255, .18);
+}
+
+/* USER */
+
+.sidebar-user {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-top: 1px solid #e2e8f0;
+    padding: 18px 5px 0;
+}
+
+.user-avatar,
+.profile-avatar {
+    width: 40px;
+    height: 40px;
+
+    border-radius: 50%;
+
+    background: deepskyblue;
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-weight: bold;
+}
+
+.user-info {
+    flex: 1;
+}
+
+.user-info strong,
+.user-info span {
+    display: block;
+}
+
+.user-info strong {
+    font-size: 13px;
+}
+
+.user-info span {
+    color: #16a34a;
+
+    font-size: 11px;
+
+    margin-top: 3px;
+}
+
+.logout-btn {
+    border: 0;
+
+    background: transparent;
+
+    color: #64748b;
+
+    cursor: pointer;
+
+    font-size: 20px;
+}
+
+
+/* ==========================================
+   MOBILE HEADER
+========================================== */
+
+.mobile-header {
+    display: none;
+}
+
+
+/* ==========================================
+   SECTIONS
+========================================== */
+
+.content-section {
+    display: none;
+}
+
+.content-section.active-section {
+    display: block;
+}
+
+
+/* ==========================================
+   HEADER
+========================================== */
+
+.top-header,
+.section-header {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+
+    margin-bottom: 25px;
+}
+
+.welcome-text {
+    color: deepskyblue;
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+    letter-spacing: 1px;
+
+    margin: 0 0 6px;
+}
+
+.top-header h1,
+.section-header h1 {
+    margin: 0;
+
+    font-size: 30px;
+}
+
+.page-description {
+    margin: 7px 0 0;
+
+    color: #64748b;
+}
+
+
+/* ==========================================
+   BUTTONS
+========================================== */
+
+.primary-btn {
+    border: 0;
+
+    background: deepskyblue;
+    color: white;
+
+    padding: 12px 18px;
+
+    border-radius: 8px;
+
+    text-decoration: none;
+
+    cursor: pointer;
+
+    font-weight: bold;
+}
+a {
+    text-decoration: none;
+}
+
+
+.primary-btn:hover {
+    background: #009bd1;
+}
+
+.cancel-btn {
+    border: 1px solid #cbd5e1;
+
+    background: white;
+
+    color: #475569;
+
+    padding: 12px 18px;
+
+    border-radius: 8px;
+
+    cursor: pointer;
+
+    font-weight: bold;
+}
+
+.text-btn {
+    border: 0;
+
+    background: transparent;
+
+    color: deepskyblue;
+
+    cursor: pointer;
+
+    font-weight: bold;
+}
+
+
+/* ==========================================
+   STATISTICS
+========================================== */
+
+.stats-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 18px;
+
+    margin-bottom: 22px;
+}
+
+.stat-card {
+    background: white;
+
+    border: 1px solid #e1edf3;
+
+    border-radius: 12px;
+
+    padding: 20px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 14px;
+}
+
+.stat-icon {
+    width: 46px;
+    height: 46px;
+
+    border-radius: 10px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 20px;
+
+    font-weight: bold;
+}
+
+.stat-icon.blue {
+    background: #e8f8ff;
+    color: deepskyblue;
+}
+
+.stat-icon.orange {
+    background: #fff7e6;
+    color: #f59e0b;
+}
+
+.stat-icon.green {
+    background: #ecfdf3;
+    color: #16a34a;
+}
+
+.stat-icon.purple {
+    background: #f3e8ff;
+    color: #9333ea;
+}
+
+.stat-card strong {
+    display: block;
+
+    font-size: 25px;
+}
+
+.stat-card span {
+    display: block;
+
+    color: #64748b;
+
+    font-size: 12px;
+
+    margin-top: 4px;
+}
+
+
+/* ==========================================
+   BANNER
+========================================== */
+
+.welcome-banner {
+    min-height: 190px;
+
+    border-radius: 14px;
+
+    background:
+        linear-gradient(
+            110deg,
+            deepskyblue,
+            #55d8ff
+        );
+
+    color: white;
+
+    padding: 30px;
+
+    margin-bottom: 22px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    overflow: hidden;
+}
+
+.banner-label {
+    font-size: 11px;
+
+    font-weight: bold;
+
+    letter-spacing: 1px;
+}
+
+.welcome-banner h2 {
+    margin: 8px 0;
+
+    font-size: 28px;
+}
+
+.welcome-banner p {
+    max-width: 600px;
+
+    margin: 0 0 18px;
+
+    line-height: 1.5;
+}
+
+.welcome-banner button {
+    border: 0;
+
+    background: white;
+
+    color: deepskyblue;
+
+    padding: 10px 16px;
+
+    border-radius: 7px;
+
+    cursor: pointer;
+
+    font-weight: bold;
+}
+
+.banner-shape {
+    font-size: 120px;
+
+    opacity: .18;
+
+    transform: rotate(20deg);
+}
+
+
+/* ==========================================
+   CARDS
+========================================== */
+
+.card {
+    background: white;
+
+    border: 1px solid #e1edf3;
+
+    border-radius: 12px;
+
+    padding: 22px;
+
+    margin-bottom: 20px;
+}
+
+.card-heading {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 15px;
+
+    margin-bottom: 18px;
+}
+
+.card-heading h2 {
+    margin: 0;
+
+    font-size: 18px;
+}
+
+.card-heading p {
+    margin: 5px 0 0;
+
+    color: #64748b;
+
+    font-size: 12px;
+}
+
+
+/* ==========================================
+   DASHBOARD
+========================================== */
+
+.dashboard-grid {
+    display: grid;
+
+    grid-template-columns:
+        1.4fr 1fr;
+
+    gap: 20px;
+}
+
+.empty-state {
+    text-align: center;
+
+    padding: 30px 15px;
+
+    color: #94a3b8;
+}
+
+.empty-state div {
+    font-size: 30px;
+
+    margin-bottom: 8px;
+
+    color: deepskyblue;
+}
+
+.empty-state p {
+    margin: 0;
+}
+
+.mini-summary {
+    display: grid;
+
+    gap: 12px;
+}
+
+.mini-summary div {
+    display: flex;
+
+    justify-content: space-between;
+
+    padding: 13px;
+
+    border-radius: 8px;
+
+    background: #f7fbfd;
+}
+
+.mini-summary span {
+    color: #64748b;
+}
+
+.mini-summary strong {
+    color: deepskyblue;
+}
+
+
+/* ==========================================
+   PRODUCTS
+========================================== */
+
+.products-layout {
+    display: grid;
+
+    grid-template-columns:
+        minmax(280px, 380px) 1fr;
+
+    gap: 20px;
+
+    align-items: start;
+}
+
+.form-card {
+    position: sticky;
+
+    top: 20px;
+}
+
+#productForm {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 9px;
+}
+
+#productForm label {
+    font-size: 13px;
+
+    font-weight: bold;
+}
+
+#productForm input,
+#productForm select,
+#productForm textarea {
+    width: 100%;
+
+    padding: 11px 12px;
+
+    border: 1px solid #cbd5e1;
+
+    border-radius: 7px;
+
+    font: inherit;
+}
+
+#productForm input:focus,
+#productForm select:focus,
+#productForm textarea:focus {
+    outline: none;
+
+    border-color: deepskyblue;
+}
+
+#productForm textarea {
+    min-height: 100px;
+
+    resize: vertical;
+}
+
+.form-actions {
+    display: flex;
+
+    gap: 8px;
+
+    margin-top: 8px;
+}
+
+.form-note {
+    color: #64748b;
+
+    font-size: 11px;
+
+    line-height: 1.5;
+}
+
+.vendor-products {
+    display: grid;
+
+    gap: 12px;
+}
+
+.vendor-product {
+    border: 1px solid #e2e8f0;
+
+    padding: 15px;
+
+    border-radius: 10px;
+}
+
+.vendor-product h3 {
+    margin: 0 0 5px;
+}
+
+.vendor-product p {
+    color: #64748b;
+}
+
+.product-actions {
+    display: flex;
+
+    gap: 8px;
+}
+
+.status {
+    display: inline-block;
+
+    padding: 5px 10px;
+
+    border-radius: 20px;
+
+    font-size: 12px;
+
+    font-weight: bold;
+}
+
+.status-Pending {
+    background: #fef3c7;
+
+    color: #92400e;
+}
+
+.status-Approved {
+    background: #dcfce7;
+
+    color: #166534;
+}
+
+.status-Rejected {
+    background: #fee2e2;
+
+    color: #991b1b;
+}
+
+
+/* ==========================================
+   PROFILE
+========================================== */
+
+.profile-card {
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+}
+
+.profile-avatar {
+    width: 65px;
+    height: 65px;
+
+    font-size: 24px;
+}
+
+.profile-card h2 {
+    margin: 0;
+}
+
+.profile-card p {
+    color: #64748b;
+
+    margin: 5px 0 0;
+}
+
+.info-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 18px;
+}
+
+.info-card span {
+    display: block;
+
+    color: #64748b;
+
+    font-size: 12px;
+
+    margin-bottom: 7px;
+}
+
+.active-text {
+    color: #16a34a;
+}
+
+
+/* ==========================================
+   SETTINGS
+========================================== */
+
+.settings-card {
+    max-width: 800px;
+}
+
+.setting-row {
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 18px 0;
+
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.setting-row:first-child {
+    padding-top: 0;
+}
+
+.setting-row:last-child {
+    border-bottom: 0;
+
+    padding-bottom: 0;
+}
+
+.setting-row h3 {
+    margin: 0;
+
+    font-size: 15px;
+}
+
+.setting-row p {
+    color: #64748b;
+
+    margin: 5px 0 0;
+
+    font-size: 12px;
+}
+
+
+/* ==========================================
+   TOGGLE
+========================================== */
+
+.switch {
+    position: relative;
+
+    width: 46px;
+    height: 25px;
+}
+
+.switch input {
+    display: none;
+}
+
+.slider {
+    position: absolute;
+
+    inset: 0;
+
+    background: #cbd5e1;
+
+    border-radius: 20px;
+
+    cursor: pointer;
+}
+
+.slider:before {
+    content: "";
+
+    position: absolute;
+
+    width: 19px;
+    height: 19px;
+
+    left: 3px;
+    top: 3px;
+
+    background: white;
+
+    border-radius: 50%;
+
+    transition: .2s;
+}
+
+.switch input:checked + .slider {
+    background: deepskyblue;
+}
+
+.switch input:checked + .slider:before {
+    transform: translateX(21px);
+}
+
+
+/* ==========================================
+   FOOTER
+========================================== */
+
+.footer {
+    text-align: center;
+
+    color: #94a3b8;
+
+    font-size: 12px;
+
+    padding: 15px 0;
+}
+
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media (max-width: 1050px) {
+
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .dashboard-grid,
+    .products-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .form-card {
+        position: static;
+    }
+}
+
+
+@media (max-width: 800px) {
+
+    .mobile-header {
+        height: 60px;
+
+        background: white;
+
+        border-bottom: 1px solid #dceaf2;
+
+        display: flex;
+
+        align-items: center;
+
+        padding: 0 18px;
+
+        gap: 15px;
+
+        position: fixed;
+
+        top: 0;
+        left: 0;
+        right: 0;
+
+        z-index: 900;
+    }
+
+    .mobile-logo {
+        font-weight: bold;
+
+        font-size: 19px;
+
+        color: deepskyblue;
+    }
+
+    .menu-toggle {
+        border: 0;
+
+        background: deepskyblue;
+
+        color: white;
+
+        width: 38px;
+        height: 38px;
+
+        border-radius: 7px;
+
+        cursor: pointer;
+
+        font-size: 20px;
+    }
+
+
+    /* MOBILE SIDEBAR */
+
+    .sidebar {
+        transform: translateX(-100%);
+
+        transition: transform .25s ease;
+
+        box-shadow:
+            8px 0 25px rgba(0,0,0,.08);
+    }
+
+    .sidebar.open {
+        transform: translateX(0);
+    }
+
+    .sidebar-overlay {
+        display: none;
+
+        position: fixed;
+
+        inset: 0;
+
+        background: rgba(0,0,0,.35);
+
+        z-index: 999;
+    }
+
+    .sidebar-overlay.show {
+        display: block;
+    }
+
+
+    .main-content {
+        margin-left: 0;
+
+        padding: 85px 18px 25px;
+    }
+
+
+    .top-header,
+    .section-header {
+        align-items: flex-start;
+
+        flex-direction: column;
+    }
+
+    .top-header h1,
+    .section-header h1 {
+        font-size: 25px;
+    }
+}
+
+
+@media (max-width: 550px) {
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .info-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .welcome-banner {
+        padding: 22px;
+    }
+
+    .welcome-banner h2 {
+        font-size: 22px;
+    }
+
+    .banner-shape {
+        display: none;
+    }
+
+    .card {
+        padding: 17px;
+    }
+
+    .form-actions {
+        flex-direction: column;
+    }
+
+    .primary-btn,
+    .cancel-btn {
+        width: 100%;
+    }
+}

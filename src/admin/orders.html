@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swap Shop | Admin - Orders</title>
+
+    <link rel="stylesheet" href="../css/admin.css">
+</head>
+
+<body>
+
+<div class="admin-layout">
+
+    <!-- ADMIN SIDEBAR -->
+    <aside class="admin-sidebar" id="adminSidebar">
+
+        <div class="sidebar-brand">
+            <div class="brand-mark">S</div>
+
+            <div>
+                <div class="brand-name">Swap Shop</div>
+                <span class="brand-subtitle">Administration</span>
+            </div>
+        </div>
+
+        <div class="sidebar-label">Main menu</div>
+
+        <nav class="sidebar-nav">
+
+            <a class="sidebar-link"
+               href="dashboard.html"
+               data-title="Dashboard">
+                <span class="sidebar-icon"></span>
+                <span>Dashboard</span>
+            </a>
+
+            <a class="sidebar-link"
+               href="users.html"
+               data-title="Customers">
+                <span class="sidebar-icon"></span>
+                <span>Customers & Vendors</span>
+            </a>
+
+            <a class="sidebar-link"
+               href="categories.html"
+               data-title="Products">
+                <span class="sidebar-icon"></span>
+                <span>Products</span>
+            </a>
+
+            <a class="sidebar-link active"
+               href="orders.html"
+               data-title="Orders">
+                <span class="sidebar-icon"></span>
+                <span>Orders</span>
+            </a>
+
+        </nav>
+
+        <div class="sidebar-label">System</div>
+
+        <nav class="sidebar-nav">
+            <a class="sidebar-link" data-title="Settings">
+                <span class="sidebar-icon"></span>
+                <span>Settings</span>
+            </a>
+        </nav>
+
+        <div class="sidebar-bottom">
+            <button class="sidebar-link logout-link" id="logoutButton">
+                <span class="sidebar-icon"></span>
+                <span>Log out</span>
+            </button>
+        </div>
+
+    </aside>
+
+
+    <!-- MAIN AREA -->
+    <main class="admin-main">
+
+        <header class="topbar">
+
+            <div class="topbar-actions">
+
+                <button class="icon-btn mobile-menu"
+                        id="menuToggle">
+                    ☰
+                </button>
+
+                <div class="page-heading">
+                    <small>Swap Shop / Admin</small>
+                    <h1>Orders</h1>
+                </div>
+
+            </div>
+
+            <div class="topbar-actions">
+
+                <button class="icon-btn" title="Messages">
+                    ✉
+                </button>
+
+                <div class="admin-profile">
+                    <div class="profile-avatar">AD</div>
+
+                    <div class="profile-text">
+                        <div class="profile-name">Administrator</div>
+                        <div class="profile-role">Platform Manager</div>
+                    </div>
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- ORDERS CONTENT -->
+        <div class="admin-content">
+
+            <section class="admin-panel active">
+
+                <div class="admin-header">
+                    <div>
+                        <h2>Orders</h2>
+                        <p>View and manage marketplace orders.</p>
+                    </div>
+                </div>
+
+                <div class="no-orders">
+                    <h2>No orders yet</h2>
+                    <p>
+                        Orders will appear here when customers place an order.
+                    </p>
+                </div>
+
+            </section>
+
+        </div>
+
+    </main>
+
+</div>
+
+
+<script src="app.js"></script>
+<script src="auth.js"></script>
+<script src="../js/admin.js"></script>
+
+<script>
+    if (typeof requireRole === "function") {
+        requireRole("admin");
+    }
+</script>
+
+</body>
+</html>

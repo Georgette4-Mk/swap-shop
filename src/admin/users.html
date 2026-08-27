@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swap Shop | Admin - Users</title>
+    <link rel="stylesheet" href="../css/admin.css">
+</head>
+
+<body>
+
+<div class="admin-layout">
+
+         LEFT ADMIN SIDEBAR
+
+    <aside class="admin-sidebar" id="adminSidebar">
+
+        <div class="sidebar-brand">
+            <div class="brand-mark">S</div>
+
+            <div>
+                <div class="brand-name">Swap Shop</div>
+                <span class="brand-subtitle">Administration</span>
+            </div>
+        </div>
+
+        <div class="sidebar-label">Main menu</div>
+
+        <nav class="sidebar-nav">
+
+            <a class="sidebar-link"
+                    href="dashboard.html"
+                    data-title="Dashboard">
+                <span class="sidebar-icon"></span>
+                <span>Dashboard</span>
+            </a>
+
+            <a class="sidebar-link"
+                    href="users.html"
+                    data-title="Customers">
+                <span class="sidebar-icon"></span>
+                <span>Customers & Vendors</span>
+            </a>
+
+            <a class="sidebar-link"
+                    href="categories.html"
+                    data-title="Products">
+                <span class="sidebar-icon"></span>
+                <span>Products</span>
+            </a>
+   <a class="sidebar-link" href="orders.html" data-title="Orders">
+                <span class="sidebar-icon"></span>
+                <span>Orders</span>
+            </a>
+
+         
+        </nav>
+
+        <div class="sidebar-label">System</div>
+
+        <nav class="sidebar-nav">
+
+            <a class="sidebar-link"
+                    href="dashboard.html"
+                    data-title="Settings">
+                <span class="sidebar-icon"></span>
+                <span>Settings</span>
+            </a>
+
+        </nav>
+
+        <div class="sidebar-bottom">
+
+            <button class="sidebar-link logout-link" id="logoutButton">
+                <span class="sidebar-icon">↪</span>
+                <span>Log out</span>
+            </button>
+
+        </div>
+
+    </aside>
+
+
+         MAIN ADMIN AREA
+    <main class="admin-main">
+
+        <header class="topbar">
+
+            <div class="topbar-actions">
+                <button class="icon-btn mobile-menu"
+                        id="menuToggle"
+                        aria-label="Open menu">
+                    ☰
+                </button>
+
+                <div class="page-heading">
+                    <small>Swap Shop / Admin</small>
+                    <h1 id="pageTitle">Users</h1>
+                </div>
+            </div>
+
+            <div class="topbar-actions">
+
+                <button class="icon-btn" title="Messages">
+                    🔔
+                </button>
+
+                <div class="admin-profile">
+                    <div class="profile-avatar">AD</div>
+
+                    <div class="profile-text">
+                        <div class="profile-name">Administrator</div>
+                        <div class="profile-role">Platform Manager</div>
+                    </div>
+                </div>
+
+            </div>
+
+        </header>
+
+
+        
+
+    <div class="admin-content">
+
+
+<section id="users" class="admin-panel active">
+    
+
+                <div class="admin-header">
+                    <div>
+                        <h2>Customer Management</h2>
+                        <p>Review and manage customer accounts.</p>
+                    </div>
+                </div>
+
+                <div class="admin-card">
+
+                    <div class="panel-head">
+                        <div>
+                            <h2>Customer directory</h2>
+                            <p>Search, inspect or manage accounts.</p>
+                        </div>
+
+                        <input class="admin-search"
+                               id="customerSearch"
+                               placeholder="Search customers...">
+                    </div>
+
+                    <div id="customersTable">
+                        <div class="admin-user row-clickable"
+                             onclick="openDetail('Customer information', 'Customer account details will appear in this sidebar.')">
+                            <div>
+                                <h3>Customer account</h3>
+                                <p>Click to inspect account information.</p>
+                            </div>
+                            <span class="status status-Active">Active</span>
+                            <span>Account</span>
+                            <div class="admin-actions">
+                                <button class="admin-btn admin-btn-light"
+                                        onclick="event.stopPropagation(); openDetail('Customer actions', 'Choose an available customer action.')">
+                                    View
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+    
+
+                <div class="admin-header">
+                    <div>
+                        <h2>Vendor Management</h2>
+                        <p>Monitor marketplace vendors and their activity.</p>
+                    </div>
+                </div>
+
+                <div class="admin-card">
+
+                    <div class="panel-head">
+                        <div>
+                            <h2>Vendor directory</h2>
+                            <p>Review vendor accounts and status.</p>
+                        </div>
+
+                        <input class="admin-search"
+                               id="vendorSearch"
+                               placeholder="Search vendors...">
+                    </div>
+
+                    <div id="vendorsTable">
+                        <div class="admin-user row-clickable"
+                             onclick="openDetail('Vendor information', 'Vendor profile and marketplace information will appear here.')">
+                            <div>
+                                <h3>Vendor account</h3>
+                                <p>Click to inspect vendor information.</p>
+                            </div>
+                            <span class="status status-Active">Active</span>
+                            <span>Marketplace</span>
+                            <div class="admin-actions">
+                                <button class="admin-btn admin-btn-light"
+                                        onclick="event.stopPropagation(); openDetail('Vendor actions', 'Choose an available vendor action.')">
+                                    View
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+</section>
+
+
+    </div>
+</main>
+
+</div>
+
+     RIGHT INFORMATION SIDEBAR
+     Opens when an admin clicks a record/card.
+
+<div class="detail-overlay" id="detailOverlay"></div>
+
+<aside class="detail-drawer" id="detailDrawer">
+
+    <div class="drawer-header">
+
+        <div>
+            <h2 id="drawerTitle">Information</h2>
+            <p id="drawerSubtitle">Details</p>
+        </div>
+
+        <button class="drawer-close"
+                id="drawerClose"
+                aria-label="Close information">
+            ×
+        </button>
+
+    </div>
+
+    <div class="drawer-body" id="drawerBody">
+
+        <div class="drawer-section">
+            <h3>Details</h3>
+
+            <div class="detail-line">
+                <span>Status</span>
+                <strong>Available</strong>
+            </div>
+
+            <div class="detail-line">
+                <span>Section</span>
+                <strong>Administration</strong>
+            </div>
+        </div>
+
+        <div class="drawer-section">
+            <h3>Information</h3>
+            <p id="drawerMessage">
+                Select an item from the admin panel to see more information.
+            </p>
+        </div>
+
+        <div class="detail-actions">
+            <button class="admin-btn admin-btn-primary">Manage</button>
+            <button class="admin-btn admin-btn-light"
+                    id="drawerDone">
+                Close
+            </button>
+        </div>
+
+    </div>
+
+</aside>
+
+
+<!-- Keep these if they already exist in your project. -->
+<script src="app.js"></script>
+<script src="auth.js"></script>
+
+<script>
+    if (typeof requireRole === "function") {
+        requireRole("admin");
+    }
+</script>
+
+
+
+<!-- NEW: sidebar navigation + information drawer -->
+<script src="../js/admin.js"></script>
+
+
+
+
+<script src="app.js"></script>
+<script src="auth.js"></script>
+
+<script>
+    if (typeof requireRole === "function") {
+        requireRole("admin");
+    }
+</script>
+
+
+
+</body>
+</html>

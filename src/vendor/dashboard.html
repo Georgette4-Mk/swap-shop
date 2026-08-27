@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Swap Shop | Vendor Dashboard</title>
+
+    <link rel="stylesheet" href="../css/vendor.css">
+</head>
+
+<body>
+
+    <!-- MOBILE HEADER -->
+    <header class="mobile-header">
+
+        <button id="sidebarToggle" class="menu-toggle">☰</button>
+
+        <div class="mobile-logo">Swap Shop</div>
+
+    </header>
+
+
+    <div class="page-layout">
+
+             <!--SIDEBAR-->
+
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-logo">
+                <div class="logo-circle">S</div>
+
+                <div>
+                    <strong>Swap Shop</strong>
+                    <span>Vendor Portal</span>
+                </div>
+
+            </div>
+
+            <nav class="sidebar-nav">
+                <p class="menu-title">MENU</p>
+
+                <a href="dashboard.html" class="sidebar-link active">
+
+                    <span></span>
+                    <span>Dashboard</span>
+
+                </a>
+
+
+                <a href="products.html" class="sidebar-link">
+
+                    <span></span>
+                    <span>My Products</span>
+
+                </a>
+
+                <a href="orders.html" class="sidebar-link">
+
+                    <span></span>
+                    <span>My Orders</span>
+
+                </a>
+            </nav>
+
+
+            <!-- USER -->
+
+            <div class="sidebar-user">
+
+                <div class="user-avatar">V</div>
+
+                <div class="user-info">
+
+                    <strong>Vendor Account</strong>
+
+                    <span>Online</span>
+
+                </div>
+
+                <button
+                    class="logout-btn"onclick="logoutVendor()">↪</button>
+            </div>
+
+        </aside>
+
+
+        <!-- MOBILE OVERLAY -->
+
+        <div
+            class="sidebar-overlay"id="sidebarOverlay"></div>
+
+
+             <!--MAIN CONTENT-->
+
+        <main class="main-content">
+
+            <!-- HEADER -->
+
+            <div class="top-header">
+
+                <div>
+
+                    <p class="welcome-text">VENDOR PORTAL</p>
+
+                    <h1>Welcome back!</h1>
+
+                    <p class="page-description">
+                        Manage your products, orders and store.
+                    </p>
+
+                </div>
+                
+                <a href="products.html" class="primary-btn">+ Add Product</a>
+            </div>
+
+                 <!--STATISTICS-->
+
+            <div class="stats-grid">
+
+                <div class="stat-card">
+
+                    <div class="stat-icon blue">▣</div>
+
+                    <div>
+                        <strong id="totalProducts">0</strong>
+
+                        <span>My Products</span>
+
+                    </div>
+                </div>
+
+
+                <div class="stat-card">
+                    <div class="stat-icon orange">◷</div>
+                    <div>
+
+                        <strong id="pendingProducts">0</strong>
+                        <span>Pending Approval</span>
+                    </div>
+
+                </div>
+
+                <div class="stat-card">
+
+                    <div class="stat-icon green">✓</div>
+                    <div>
+
+                        <strong id="approvedProducts">0</strong>
+
+                        <span>Approved Products</span>
+                    </div>
+
+                </div>
+
+                <div class="stat-card">
+                    <div class="stat-icon purple">₣</div>
+
+                    <div>
+
+                        <strong id="vendorRevenue">0</strong>
+
+                        <span>Total Revenue</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+                 <!--WELCOME BANNER-->
+
+            <div class="welcome-banner">
+                <div>
+
+                    <span class="banner-label">YOUR STORE</span>
+                    <h2>Grow your store with Swap Shop.</h2>
+
+                    <p>Add products, manage orders and keep your customers happy.</p>
+
+                    <a href="products.html" class="banner-button">Add a Product</a>
+
+                </div>
+
+            </div>
+
+            <!--DASHBOARD CARDS-->
+
+            <div class="dashboard-grid">
+
+
+                <!-- RECENT PRODUCTS -->
+
+                <div class="card">
+                    <div class="card-heading">
+                        <div>
+
+                            <h2>Recent Products</h2>
+                            <p>Your latest products</p>
+
+                        </div>
+
+                        <a href="products.html"class="text-btn">View all </a>
+
+                    </div>
+
+
+                    <div id="dashboardProducts" class="empty-state">
+
+                        <div>▣</div>
+
+                        <p>Your products will appear here.</p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- ORDER SUMMARY -->
+
+                <div class="card">
+                    <div class="card-heading">
+                        <div>
+
+                            <h2>Order Summary</h2>
+
+                            <p>Latest store activity</p>
+
+                        </div>
+                        <a href="orders.html" class="text-btn">View orders</a>
+
+                    </div>
+
+                    <div class="mini-summary">
+                        <div>
+
+                            <span>New Orders</span>
+                            <strong id="newOrders">0</strong>
+
+                        </div>
+
+                        <div>
+                            <span>Processing</span>
+                            <strong id="processingOrders">0</strong>
+                        </div>
+
+                        <div>
+                            <span>Completed</span>
+                            <strong id="completedOrders">0</strong>
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <footer class="footer">
+
+                © 2026 Swap Shop Vendor Portal
+
+            </footer>
+
+        </main>
+
+    </div>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="../js/vendor.js"></script>
+
+</body>
+
+</html>

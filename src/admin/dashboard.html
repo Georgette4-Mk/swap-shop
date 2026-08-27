@@ -1,473 +1,274 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
-<meta charset="UTF-8">
-
-<meta
-    name="viewport"
-    content="width=device-width, initial-scale=1.0"
->
-
-<title>Swap Shop | Admin Dashboard</title>
-
-<link rel="stylesheet" href="style.css">
-<link rel="stylesheet" href="admin-main.css">
-<link rel="stylesheet" href="admin-dashboard.css">
-<link rel="stylesheet" href="admin-product.css">
-<link rel="stylesheet" href="admin-user.css">
-<link rel="stylesheet" href="responsive.css">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Swap Shop | Admin - Dashboard</title>
+    <link rel="stylesheet" href="../css/admin.css">
 </head>
-
 
 <body>
 
+<div class="admin-layout">
 
-<header class="navbar">
+         LEFT ADMIN SIDEBAR
 
-    <div class="logo">
-        Swap Shop <span>Admin Portal</span>
-    </div>
+    <aside class="admin-sidebar" id="adminSidebar">
 
-    <button
-        class="menu-toggle"
-        id="menuToggle"
-    >
-        ☰
-    </button>
+        <div class="sidebar-brand">
+            <div class="brand-mark">S</div>
 
-    <nav class="nav-links">
+            <div>
+                <div class="brand-name">Swap Shop</div>
+                <span class="brand-subtitle">Administration</span>
+            </div>
+        </div>
 
-        <a href="index.html">
-            Customer
-        </a>
+        <div class="sidebar-label">Main menu</div>
 
-        <a href="../Vendor/vendor.html">
-            Vendor
-        </a>
+        <nav class="sidebar-nav">
 
-        <a
-            href="admin.html"
-            class="active"
-        >
-            Admin
-        </a>
+            <a class="sidebar-link"
+                    href="dashboard.html"
+                    data-title="Dashboard">
+                <span class="sidebar-icon"></span>
+                <span>Dashboard</span>
+            </a>
 
-        <a href="javascript:logout()">
-            Logout
-        </a>
+            <a class="sidebar-link"
+                    href="users.html"
+                    data-title="Customers">
+                <span class="sidebar-icon"></span>
+                <span>Customers & Vendors</span>
+            </a>
 
-    </nav>
+        
+            <a class="sidebar-link"
+                    href="categories.html"
+                    data-title="Products">
+                <span class="sidebar-icon"></span>
+                <span>Products</span>
+            </a>
 
-</header>
+           <a class="sidebar-link" href="orders.html"data-title="Orders">
+            <span class="sidebar-icon"></span>
+                <span>Orders</span>
+</a>
 
 
-<main class="admin-page">
+        </nav>
 
+        <div class="sidebar-label">System</div>
 
-<!-- HEADER -->
+        <nav class="sidebar-nav">
 
-<section class="admin-header">
+            <a class="sidebar-link" data-title="Settings">
+                <span class="sidebar-icon"></span>
+                <span>Settings</span>
+            </a>
 
-    <div>
+        </nav>
 
-        <h1>
-            Admin Dashboard
-        </h1>
+        <div class="sidebar-bottom">
 
-        <p>
-            Complete oversight of customers,
-            vendors, products and orders.
-        </p>
+            <button class="sidebar-link logout-link" id="logoutButton">
+                <span class="sidebar-icon"></span>
+                <span>Log out</span>
+            </button>
 
-    </div>
+        </div>
 
-    <button
-        class="danger-btn"
-        onclick="resetDemoData()"
-    >
-        Reset Demo Data
-    </button>
+    </aside>
 
-</section>
 
 
-<!-- MAIN STATISTICS -->
+         MAIN ADMIN AREA
 
-<section class="admin-stats">
+    <main class="admin-main">
 
+        <header class="topbar">
 
-    <div class="admin-stat">
+            <div class="topbar-actions">
+                <button class="icon-btn mobile-menu"
+                        id="menuToggle"
+                        aria-label="Open menu">
+                    ☰
+                </button>
 
-        <span>👥</span>
+                <div class="page-heading">
+                    <small>Swap Shop / Admin</small>
+                    <h1 id="pageTitle">Dashboard</h1>
+                </div>
+            </div>
 
-        <strong id="customerCount">
-            0
-        </strong>
+            <div class="topbar-actions">
 
-        <small>
-            Customers
-        </small>
+                <button class="icon-btn" title="Messages">
+                    ✉
+                </button>
 
-    </div>
+                <div class="admin-profile">
+                    <div class="profile-avatar">AD</div>
 
-
-    <div class="admin-stat">
-
-        <span>🏪</span>
-
-        <strong id="vendorCount">
-            0
-        </strong>
-
-        <small>
-            Vendors
-        </small>
-
-    </div>
-
-
-    <div class="admin-stat">
-
-        <span>📦</span>
-
-        <strong id="productCount">
-            0
-        </strong>
-
-        <small>
-            Products
-        </small>
-
-    </div>
-
-
-    <div class="admin-stat">
-
-        <span>🧾</span>
-
-        <strong id="orderCount">
-            0
-        </strong>
-
-        <small>
-            Orders
-        </small>
-
-    </div>
-
-</section>
-
-
-<!-- SECONDARY STATISTICS -->
-
-<section class="admin-stats secondary">
-
-
-    <div class="admin-stat">
-
-        <span>⏳</span>
-
-        <strong id="pendingCount">
-            0
-        </strong>
-
-        <small>
-            Pending Products
-        </small>
-
-    </div>
-
-
-    <div class="admin-stat">
-
-        <span>💰</span>
-
-        <strong id="revenueCount">
-            0
-        </strong>
-
-        <small>
-            Total Revenue
-        </small>
-
-    </div>
-
-
-    <div class="admin-stat">
-
-        <span>🚚</span>
-
-        <strong id="deliveryCount">
-            0
-        </strong>
-
-        <small>
-            Pending Delivery
-        </small>
+                    <div class="profile-text">
+                        <div class="profile-name">Administrator</div>
+                        <div class="profile-role">Platform Manager</div>
+                    </div>
+                </div>
+
+            </div>
+
+        </header>
+
+
+        
+
+    <div class="admin-content">
+
+<section id="overview" class="admin-panel active">
+
+                <div class="admin-header">
+                    <div>
+                        <h2>Platform Overview</h2>
+                        <p>Monitor marketplace activity from one place.</p>
+                    </div>
+
+                    <button class="admin-btn admin-btn-primary"
+                            onclick="window.openDetail('Platform summary', 'Overview')">
+                        View Summary
+                    </button>
+                </div>
+
+
+                <section class="admin-stats">
+
+                    <div class="admin-stat">
+                        <div class="stat-top">
+                            <span class="stat-label">Customers</span>
+                            <span class="stat-icon"></span>
+                        </div>
+                        <strong id="customerCount">0</strong>
+                        <div class="stat-change">Registered accounts</div>
+                    </div>
+
+                    <div class="admin-stat">
+                        <div class="stat-top">
+                            <span class="stat-label">Vendors</span>
+                            <span class="stat-icon"></span>
+                        </div>
+                        <strong id="vendorCount">0</strong>
+                        <div class="stat-change">Marketplace vendors</div>
+                    </div>
+
+                    <div class="admin-stat">
+                        <div class="stat-top">
+                            <span class="stat-label">Products</span>
+                            <span class="stat-icon"></span>
+                        </div>
+                        <strong id="productCount"></strong>
+                        <div class="stat-change">Items listed</div>
+                    </div>
+
+                    <div class="admin-stat">
+                        <div class="stat-top">
+                            <span class="stat-label">Orders</span>
+                            <span class="stat-icon"></span>
+                        </div>
+                        <strong id="orderCount">0</strong>
+                        <div class="stat-change">Marketplace orders</div>
+                    </div>
+
+                </section>
 
     </div>
-
-
-    <div class="admin-stat">
-
-        <span>⚠️</span>
-
-        <strong id="issueCount">
-            0
-        </strong>
-
-        <small>
-            Attention Needed
-        </small>
-
-    </div>
-
-</section>
-
-
-<!-- ADMIN NAVIGATION -->
-
-<div class="admin-tabs">
-
-    <button
-        class="tab active"
-        data-tab="overview"
-    >
-        Overview
-    </button>
-
-    <button
-        class="tab"
-        data-tab="customers"
-    >
-        Customers
-    </button>
-
-    <button
-        class="tab"
-        data-tab="vendors"
-    >
-        Vendors
-    </button>
-
-    <button
-        class="tab"
-        data-tab="products"
-    >
-        Products
-    </button>
-
-    <button
-        class="tab"
-        data-tab="orders"
-    >
-        Orders
-    </button>
+</main>
 
 </div>
 
+     RIGHT INFORMATION SIDEBAR
+     Opens when an admin clicks a record/card.
 
-<!-- OVERVIEW -->
+<div class="detail-overlay" id="detailOverlay"></div>
 
-<section
-    id="overview"
-    class="admin-panel active"
->
+<aside class="detail-drawer" id="detailDrawer">
 
-    <div class="panel-grid">
+    <div class="drawer-header">
 
-
-        <div class="admin-card">
-
-            <h2>
-                Pending Product Approvals
-            </h2>
-
-            <div id="pendingProducts"></div>
-
+        <div>
+            <h2 id="drawerTitle">Information</h2>
+            <p id="drawerSubtitle">Details</p>
         </div>
 
+        <button class="drawer-close"
+                id="drawerClose"
+                aria-label="Close information">
+            ×
+        </button>
 
-        <div class="admin-card">
+    </div>
 
-            <h2>
-                Recent Orders
-            </h2>
+    <div class="drawer-body" id="drawerBody">
 
-            <div id="recentOrders"></div>
+        <div class="drawer-section">
+            <h3>Details</h3>
 
+            <div class="detail-line">
+                <span>Status</span>
+                <strong>Available</strong>
+            </div>
+
+            <div class="detail-line">
+                <span>Section</span>
+                <strong>Administration</strong>
+            </div>
+        </div>
+
+        <div class="drawer-section">
+            <h3>Information</h3>
+            <p id="drawerMessage">
+                Select an item from the admin panel to see more information.
+            </p>
+        </div>
+
+        <div class="detail-actions">
+            <button class="admin-btn admin-btn-primary">Manage</button>
+            <button class="admin-btn admin-btn-light"
+                    id="drawerDone">
+                Close
+            </button>
         </div>
 
     </div>
 
-</section>
+</aside>
 
 
-<!-- CUSTOMERS -->
-
-<section
-    id="customers"
-    class="admin-panel"
->
-
-    <div class="admin-card">
-
-        <div class="panel-head">
-
-            <h2>
-                Customer Management
-            </h2>
-
-            <input
-                class="admin-search"
-                id="customerSearch"
-                placeholder="Search customers..."
-            >
-
-        </div>
-
-        <div id="customersTable"></div>
-
-    </div>
-
-</section>
-
-
-<!-- VENDORS -->
-
-<section
-    id="vendors"
-    class="admin-panel"
->
-
-    <div class="admin-card">
-
-        <div class="panel-head">
-
-            <h2>
-                Vendor Management
-            </h2>
-
-            <input
-                class="admin-search"
-                id="vendorSearch"
-                placeholder="Search vendors..."
-            >
-
-        </div>
-
-        <div id="vendorsTable"></div>
-
-    </div>
-
-</section>
-
-
-<!-- PRODUCTS -->
-
-<section
-    id="products"
-    class="admin-panel"
->
-
-    <div class="admin-card">
-
-        <div class="panel-head">
-
-            <h2>
-                All Products
-            </h2>
-
-            <input
-                class="admin-search"
-                id="productSearch"
-                placeholder="Search products..."
-            >
-
-        </div>
-
-        <div id="productsTable"></div>
-
-    </div>
-
-</section>
-
-
-<!-- ORDERS -->
-
-<section
-    id="orders"
-    class="admin-panel"
->
-
-    <div class="admin-card">
-
-        <div class="panel-head">
-
-            <h2>
-                All Orders
-            </h2>
-
-            <select id="orderStatusFilter">
-
-                <option value="">
-                    All statuses
-                </option>
-
-                <option>
-                    Pending
-                </option>
-
-                <option>
-                    Processing
-                </option>
-
-                <option>
-                    Shipped
-                </option>
-
-                <option>
-                    Delivered
-                </option>
-
-                <option>
-                    Cancelled
-                </option>
-
-            </select>
-
-        </div>
-
-        <div id="ordersTable"></div>
-
-    </div>
-
-</section>
-
-
-</main>
-
-
+<!-- Keep these if they already exist in your project. -->
 <script src="app.js"></script>
-
 <script src="auth.js"></script>
 
 <script>
-requireRole("admin");
+    if (typeof requireRole === "function") {
+        requireRole("admin");
+    }
 </script>
 
-<script src="admin-main.js"></script>
-<script src="admin-dashboard.js"></script>
-<script src="admin-product.js"></script>
-<script src="admin-user.js"></script>
-<script src="admin-order.js"></script>
-<script src="admin-customer.js"></script>
+<!-- NEW: sidebar navigation + information drawer -->
+<script src="../js/admin.js"></script>
+
+
+
+
+<script src="app.js"></script>
+<script src="auth.js"></script>
+
+<script>
+    if (typeof requireRole === "function") {
+        requireRole("admin");
+    }
+</script>
 
 
 
 </body>
-
 </html>
