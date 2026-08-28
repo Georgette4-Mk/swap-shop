@@ -1,120 +1,187 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Swap Shop | Customer Dashboard</title>
-    <link rel="stylesheet" href="../src/css/style.css">
-    <link rel="stylesheet" href="../src\css\dashboard.css">
-    <link rel="stylesheet" href="../src\css\responsive.css">
-</head>
-<body>
-<header class="navbar">
-    <div class="logo">Swap Shop
-        <span>Buy. Sell. Connect.</span>
-    </div>
-    <button class="menu-toggle" id="menuToggle">☰</button>
-    <nav class="nav-links">
-        <a href="../">Cart</a>
-        <a href="../src\customer\checkout.html">Checkout</a>
-        <a href="#">Logout</a>
-    </nav>
-</header>
-<div class="dashboard-container">
-     <aside class="sidebar" id="sidebar">
-        <div class="customer-profile">
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/dashboard.css" />
+    <link rel="stylesheet" href="css/responsive.css" />
+    <link rel="stylesheet" href="css//navbar.css" />
+    
+  </head>
+  <body>
+    <header class="navbar-container">
+      <nav class="navbar">
+        <!-- Logo -->
+        <a href="#" class="navbar-brand">Swap-Shop</a>
 
-            <div class="avatar">JS</div>
-            <h3>John Smith</h3>
-            <p>Customer Account</p>
+        <!-- Navigation Links -->
+        <ul class="navbar-links">
+          <li><a href="#" class="active">HOME</a></li>
+       
+
+          <!-- Dropdown: Vendors -->
+          <li class="dropdown">
+            <a href="#">VENDORS <span class="arrow">▼</span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Vendor Portal</a></li>
+              <li><a href="../vendor.html">Become a Vendor</a></li>
+            </ul>
+          </li>
+
+
+
+          <!-- Dropdown: Company -->
+          <li class="dropdown">
+            <a href="#">COMPANY <span class="arrow">▼</span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Careers</a></li>
+            </ul>
+          </li>
+
+         
+      </nav>
+    </header>
+
+    <div class="yes">
+      <div id="navbar-placeholder"></div>
+   <section class="hero-section">
+  <div class="hero-container">
+    <!-- Left Content Column -->
+    <div class="hero-content">
+      <h1 class="hero-title">Swap Shop</h1>
+      <p class="hero-description">
+        A campus-based marketplace platform that connects students and neighbors to 
+        buy, sell, or trade items within their local community. <br>
+         So join us to get an amazing experience.
+      </p> 
+      <div class="hero-actions">
+        <a href="../src/auth/register.html" class="btn btn-primary">Let's Get Started</a>
+        
+      </div>
+
+      <!-- Stats Grid -->
+      <div class="stats-grid">
+        <div class="stat-card">
+          <span class="stat-number">134K+</span>
+          <span class="stat-label">Users</span>
         </div>
-        <ul>
-            <li class="active">
-                <a href="index.html">🏠 Dashboard</a>
-            </li>
-            <li>
-                <a href="browse.html">🛒 Browse Products</a>
-            </li>
-            <li>
-                <a href="../Cart/cart.html">🛍 Shopping Cart</a>
-            </li>
-            <li>
-                <a href="../Checkout/checkout.html">💳 Checkout</a>
-            </li>
-            <li>
-                <a href="#">👤 Profile</a>
-            </li>
-            <li>
-                <a href="#">🚪 Logout</a>
-            </li>
-        </ul>
-    </aside>
-    <!-- MAIN CONTENT -->
-    <main class="dashboard-content">
-        <div class="welcome-box">
-            <h1>Welcome back, John 👋</h1>
-            <p>Discover products from trusted vendors and enjoy shopping on Swap Shop.</p>
+        <div class="stat-card">
+          <span class="stat-number">11K+</span>
+          <span class="stat-label">Registered Vendors</span>
         </div>
-        <!-- STAT CARDS -->
-       <div class="stat-card">
-    <div class="icon">🛒</div>
-        <h2 id="cartStat">0</h2>
-        <p>Cart Items</p>
+        <div class="stat-card">
+          <span class="stat-number">4K+</span>
+          <span class="stat-label">Approved Vendors</span>
+        </div>
+        <div class="stat-card">
+          <span class="stat-number">90K+</span>
+          <span class="stat-label">Products & Services</span>
+        </div>
+      </div>
     </div>
 
-            <div class="stat-card">
-                <div class="icon">
-                    📦
-                </div>
-                <h2>0</h2>
-                <p>Orders</p>
-                <p>Wishlist</p>
+    <!-- Right Image Column -->
+    <div class="hero-image-wrapper">
+       <img
+      src="../public/images/wall.jpg"
+      height="300px"
+      width="300px"
+     class="hero-image"
+    />
+    </div>
+  </div>
+</section>
+    <div class="more">
+      <div class="card-container">
+        <div class="card">
+          <div class="card-content">
+            <h2>Find products around you</h2>
+            <p>
+              Swap shop provides a secure, user-friendly online marketplace
+              where campus community members can list items for sale, browse
+              available products, search by category or keyword, view seller
+              contact details, and complete purchases.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="card-container">
+        <div class="card">
+          <div class="card-content">
+            <h2>Brouse on Swap Shop</h2>
+            <img
+              src="../public/images/search-icon.png"
+              height="100px"
+              width="100px"
+              id="search"
+            />
+            <p>
+              Don't know the particular product to buy? or you know but you
+              can't find it. Don't worry swap shop's got you covered just click
+              on that search browser and type what you'er looking for
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="card-container">
+        <div class="card">
+          <div class="card-content">
+            <h2>Why Choose Us</h2>
+            <div class="card-content-image">
+              <img
+                src="../public/images/doubty.png"
+                height="100px"
+                width="100px"
+                id="search"
+              />
             </div>
-            <div class="stat-card">
-                <div class="icon">
-                    💰
-                </div>
-                <h2>
-                    
-                </h2>
-                <p>
-                    Total Spent
-                </p>
-            </div>
-        </section>
-        <!-- QUICK ACTIONS -->
-        <section class="quick-actions">
-            <h2>
-                Quick Actions
-            </h2>
-            <div class="action-grid">
-                <a href="browse.html">
-                    Browse Products
-                </a>
-                <a href="../Cart/cart.html"> View Cart <span id="cartCount" class="cart-count">0</span></a>
-                <a href="#">
-                    Update Profile
-                </a>
-                <a href="#">
-                    View Orders
-                </a>
-            </div>
-        </section>
-    </main>
-</div>
+            <ul>
+              <li>We offer the best services</li>
+              <li>We prioritize the safety of our client's data</li>
+              <li>Our payment method is top tier</li>
+            </ul>
+          </div>
+        </div> 
+      </div>
+    </div>
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-grid">
+          <!-- swap shop Column -->
+          <div class="footer-col">
+            <h4 class="footer-title">SWAP SHOP</h4>
+            <ul class="footer-links">
+              <li><a href="#">Features</a></li>
+              <li><a href="#">Vendors</a></li>
+              <li><a href="#">Privacy</a></li>
+              <li><a href="#">Terms</a></li>
+            </ul>
+          </div>
 
-<footer>
+          <!-- COMPANY Column -->
+          <div class="footer-col">
+            <h4 class="footer-title">COMPANY</h4>
+            <ul class="footer-links">
+              <li><a href="#">About</a></li>
+              <li><a href="#">Get In Touch</a></li>
+            </ul>
+          </div>
 
-    <p>
-        © 2026 Swap Shop. Buy. Sell. Connect.
-    </p>
+          
 
-</footer>
-
-<script src="app.js"></script>
-<script src="storage.js"></script>
-<script src="dashboard.js"></script>
-
-</body>
+        <!-- Bottom Bar -->
+        <div class="footer-bottom">
+          <p class="copyright">
+            Copyright &copy; 2026 Swap shop.co - All rights reserved
+          </p>
+        
+        </div>
+      </div>
+    </footer>
+    <script src="../src/js/index.js"></script>
+  </body>
 </html>
+

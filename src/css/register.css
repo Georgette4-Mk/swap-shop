@@ -1,0 +1,80 @@
+body {
+   margin: 0;
+  padding: 40px 20px;
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  background-color: #f4f7f6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+/* Heading wrapper */
+.we h1 {
+  margin: 0 0 12px 0;
+  font-size: 2.2rem;
+  color: #111827;
+  text-align: center;
+}
+
+/* Paragraph wrapper */
+.my p {
+  margin: 0 0 24px 0;
+  font-size: 1rem;
+  color: #4b5563;
+  text-align: center;
+  line-height: 1.5;
+}
+
+/* Main illustration image */
+#girl {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto 24px auto;
+  object-fit: contain;
+}
+
+
+/* Button container */
+.register {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Common button base styles */
+.btn, .but {
+  padding: 12px 28px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  outline: none;
+}
+
+/* Customer button (.btn) */
+.btn {
+  background-color: #2563eb;
+  color: #ffffff;
+  border: 2px solid #2563eb;
+}
+
+.btn:hover {
+  background-color: #1d4ed8;
+  border-color: #1d4ed8;
+}
+
+/* Vendor button (.but) */
+.but {
+  background-color: transparent;
+  color: #2563eb;
+  border: 2px solid #2563eb;
+}
+
+.but:hover {
+  background-color: #eff6ff;
+}
