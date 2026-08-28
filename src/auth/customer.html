@@ -10,26 +10,38 @@
   <body>
      <div class="cash">
    <div class="box">
-    <h1>login</h1>
-    <form>
+    <h1>Sign Up as a customer</h1>
+    <form id="signinForm">
       <div class="input-group">
         <div class="input-field">
          <i class="fa-solid fa-user"></i>
-         <input type="text" placeholder="Username">
+         <input type="text" id="username" placeholder="Username">
         </div>
         <div class="input-field">
         <i class="fa-solid fa-at"></i>
-         <input type="email" placeholder="Email">
+         <input type="email" id="email" placeholder="Email">
+      </div>
+      <div class="input-field">
+        <i class="fa-solid fa-phone"></i>
+         <input type="number" id="phone" placeholder="Phone Number">
+      </div>
+      <div class="input-field">
+        <i class="fa-solid fa-map"></i>
+         <input type="place" id="location" placeholder="location">
       </div>
       <div class="input-field">
         <i class="fa-solid fa-lock"></i>
-         <input type="password" placeholder="Password">
+         <input type="password" id="password" placeholder="Password">
       </div>
-     
+      
+      </div>
        <div class="btn-field"></div>
       <a href="#"> Forgot password</a>
-       <button type="submit" class="btn btn-primary">login</button><br>
-      
+       <button type="submit" class="btn btn-primary">Sign up</button><br>
+       <h7>Already have an account?</h3>
+         <a href="login.html">
+        <button type="button" class=" btn btn-secondary">login</button>
+     </a>
        </div> 
       </div>
     </form>
